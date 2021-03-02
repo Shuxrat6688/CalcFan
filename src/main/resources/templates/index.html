@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>All Employees</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+</head>
+
+<body>
+<div class="container">
+    <div class="accordion" id="accordionExample">
+
+        <div class="card">
+            <div class="card-header" id="headingOne" style="background-color: #00AA9E;">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed text-white" type="button"
+                            data-toggle="collapse"
+                            data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        Ilashish qutbida shestrna tishlarining yeyilish tezligi abraziv zarrachalar ishtirokida hisoblash
+                    </button>
+                </h2>
+            </div>
+
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label for="a1" class="col-sm-8 col-form-label text-right">Ilashish qutbida tishning
+                                        uzunligi bo'yicha joylashgan obraziv zarrachalar bilan deformatsialangan ishqalanish sirtining hajmi: </label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="a1">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label for="b1" class="col-sm-8 col-form-label text-right">Tishni ishqalanish sirtlarini qayta deformatsialash koefitsienti:</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="b1">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label for="c1" class="col-sm-8 col-form-label text-right">Yetaklovchi (yetaklanuvchi) tishli g'ildirakning aylanishlar chastotasi:</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="c1">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label for="d1" class="col-sm-8 col-form-label text-right">Obraziv zarrachaning shaklini hisobga oluvchi koeffitsient:</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="d1">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label for="e1" class="col-sm-8 col-form-label text-right">Deformatsialangan hajmni buzilishga olib keluvchi obraziv zarrachalarning tutashish sikillarining soni:</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="e1">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label for="f1" class="col-sm-8 col-form-label text-right">Deformatsialangan metal hajmi:</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="f1">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br>
+                        <div class="row">
+                            <div class="col-md-4 offset-2">
+                                <h3>Natija: <span class="badge badge-secondary" id="result1">0</span></h3>
+
+                            </div>
+                            <div class="col-md-6">
+                                <button type="button" class="btn btn-primary btn-lg" id="calcFun1">Hisoblash</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="card-header" id="headingTwo" style="background-color: #00AA9E;">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed text-white" type="button"
+                            data-toggle="collapse"
+                            data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Yeyilish jarayonida ishtirok etuvchi obraziv zarrachalarning o'rtacha o'lchamini hisoblash
+                    </button>
+                </h2>
+            </div>
+
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="card-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label for="a2" class="col-sm-8 col-form-label text-right">Obraziv zarrachaning max o'lchami:</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="a2">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label for="b2" class="col-sm-8 col-form-label text-right">Obraziv zarrachaning min o'lchami:</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="b2">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br>
+                        <div class="row">
+                            <div class="col-md-4 offset-2">
+                                <h3>Natija: <span class="badge badge-secondary" id="result2">0</span></h3>
+
+                            </div>
+                            <div class="col-md-6">
+                                <button type="button" class="btn btn-primary btn-lg" id="calcFun2">Hisoblash</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="card-header" id="headingThree" style="background-color: #00AA9E;">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed text-white" type="button"
+                            data-toggle="collapse"
+                            data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Obraziv zarrachaning maydalanishga olib keluvchi siquvchi yuklamani hisoblash
+                    </button>
+                </h2>
+            </div>
+
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label for="a3" class="col-sm-8 col-form-label text-right">Tajriba yo'li bilan aniqlangan kattalik:</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="a3">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label for="b3" class="col-sm-8 col-form-label text-right">Obraziv zarrachaning o'rtacha o'lchami:</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="b3">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label for="c3" class="col-sm-8 col-form-label text-right">Tajriba yo'li bilan aniqlangan kattalik:</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="c3">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br>
+                        <div class="row">
+                            <div class="col-md-4 offset-2">
+                                <h3>Natija: <span class="badge badge-secondary" id="result3">0</span></h3>
+
+                            </div>
+                            <div class="col-md-6">
+                                <button type="button" class="btn btn-primary btn-lg" id="calcFun3">Hisoblash</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="card-header" id="headingFour" style="background-color: #00AA9E;">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed text-white" type="button"
+                            data-toggle="collapse"
+                            data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Obraziv zarrachaning maydalanishga olib keluvchi siqishdagi normal kuchlanishni hisoblash
+                    </button>
+                </h2>
+            </div>
+
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                <div class="card-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label for="a4" class="col-sm-8 col-form-label text-right">Obraziv zarrachani maydalanishga olib keluvchi siquvchi yuklama:</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="a4">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label for="b4" class="col-sm-8 col-form-label text-right">Obraziv zarracha o'lchami:</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="b4">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br>
+                        <div class="row">
+                            <div class="col-md-4 offset-2">
+                                <h3>Natija: <span class="badge badge-secondary" id="result4">0</span></h3>
+
+                            </div>
+                            <div class="col-md-6">
+                                <button type="button" class="btn btn-primary btn-lg" id="calcFun4">Hisoblash</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="card-header" id="headingFive" style="background-color: #00AA9E;">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed  text-white" type="button"
+                            data-toggle="collapse"
+                            data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive"
+                            style="background-color: #00AA9E;">
+                        Ilashilgan qutbda tishni uzunligi bo'yicha joylashgan barcha obraziv zarrachalar bilan deformatsialangan sirtning hajmini hisoblash
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                <div class="card-body">
+                    <div class="container">
+                        <div class="row">
+
+                            <div class="col-md-6">
+                                <div class="alert alert-primary" role="alert">
+                                    Yetaklovchi shestrnaning tishlari uchun
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="a5" class="col-sm-8 col-form-label text-right">Obraziv zarrachaning o'rtacha o'lchami:</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="a5">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="b5" class="col-sm-8 col-form-label text-right">Tutashuvchi
+                                        kuchlar:</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="b5">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="c5" class="col-sm-8 col-form-label text-right">Yetaklovchi shestrna materialini qattiqligi:</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="c5">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="d5" class="col-sm-8 col-form-label text-right">Tishning uzunligi:</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="d5">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="e5" class="col-sm-8 col-form-label text-right">Moydagi obraziv zarrachaning miqdori:</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="e5">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="f5" class="col-sm-8 col-form-label text-right">Moyning zichligi:</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="f5">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="g5" class="col-sm-8 col-form-label text-right">Obraziv zarrachaning shaklini hisobga oluvchi koeffitsient:</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="g5">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="h5" class="col-sm-8 col-form-label text-right">Obraziv zarrachaning zichligi:</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="h5">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <h4>Natija: <span class="badge badge-secondary" id="result5">0</span></h4>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <button type="button" class="btn btn-primary btn-lg" id="calcFun5">
+                                                Hisoblash
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="alert alert-primary" role="alert">
+                                    Yetaklanuvchi shestrnaning tishlari uchun
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="a55" class="col-sm-8 col-form-label text-right">Obraziv zarrachaning o'rtacha o'lchami:</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="a55">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="b55" class="col-sm-8 col-form-label text-right">Tutashuvchi kuchlar:</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="b55">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="c55" class="col-sm-8 col-form-label text-right">Yetaklovchi shestrna materialini qattiqligi:</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="c55">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="d55" class="col-sm-8 col-form-label text-right">Tishning uzunligi:</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="d55">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="e55" class="col-sm-8 col-form-label text-right">Moydagi obraziv zarrachaning miqdori:</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="e55">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="f55" class="col-sm-8 col-form-label text-right">Moyning zichligi:</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="f55">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="g55" class="col-sm-8 col-form-label text-right">Obraziv zarrachaning shaklini hisobga oluvchi koeffitsient:</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="g55">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="h55" class="col-sm-8 col-form-label text-right">Obraziv zarrachaning zichligi:</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="h55">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <h4>Natija: <span class="badge badge-secondary" id="result55">0</span></h4>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <button type="button" class="btn btn-primary btn-lg" id="calcFun55">
+                                                Hisoblash
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="card-header" id="headingSix" style="background-color: #00AA9E;">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed text-white" type="button"
+                            data-toggle="collapse"
+                            data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                        Shestrna materialining qattiqligi va obraziv zarrachaning mustahkamligining nisbat koeffitsientini hisoblash
+                    </button>
+                </h2>
+            </div>
+
+            <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+                <div class="card-body">
+                    <div class="container">
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label for="a6" class="col-sm-8 col-form-label text-right">Yetaklovchi shestrna materialining qattiqligi:</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="a6">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label for="b6" class="col-sm-8 col-form-label text-right">Tutashuvchi kuchlar:</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="b6">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br>
+                        <div class="row">
+                            <div class="col-md-4 offset-2">
+                                <h3>Natija: <span class="badge badge-secondary" id="result6">0</span></h3>
+
+                            </div>
+                            <div class="col-md-6">
+                                <button type="button" class="btn btn-primary btn-lg" id="calcFun6">Hisoblash</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="card-header" id="headingSeven" style="background-color: #00AA9E;">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed text-white" type="button"
+                            data-toggle="collapse"
+                            data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                        Yetaklovchi (yetaklanuvchi) shestrna tishlarining ishqalanish sirtidagi ko'ndalang kesim yuzasini obraziv zarrachalarni botishi natijasida deformatsialangan metal hajmi
+                    </button>
+                </h2>
+            </div>
+
+            <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
+                <div class="card-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label for="a7" class="col-sm-8 col-form-label text-right">Ilashish moduli:</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="a7">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label for="b7" class="col-sm-8 col-form-label text-right">Tishning uzunligi:</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="b7">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br>
+                        <div class="row">
+                            <div class="col-md-4 offset-2">
+                                <h3>Natija: <span class="badge badge-secondary" id="result7">0</span></h3>
+
+                            </div>
+                            <div class="col-md-6">
+                                <button type="button" class="btn btn-primary btn-lg" id="calcFun7">Hisoblash</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="card-header" id="headingEight" style="background-color: #00AA9E;">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed text-white" type="button"
+                            data-toggle="collapse"
+                            data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                        Tishning ishqalanish sirtining qayta deformatsialanish ehtimolini hisoblash.
+                    </button>
+                </h2>
+            </div>
+
+            <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
+                <div class="card-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label for="a8" class="col-sm-8 col-form-label text-right">Obraziv zarrachaning o'rtacha o'lchami:</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="a8">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label for="b8" class="col-sm-8 col-form-label text-right">Moydagi obraziv zarrachaning miqdori:</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="b8">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label for="c8" class="col-sm-8 col-form-label text-right">Obraziv zarrachaning zichligi:</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="c8">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label for="d8" class="col-sm-8 col-form-label text-right">Uzatishlar nisbati:</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="d8">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label for="e8" class="col-sm-8 col-form-label text-right">G'ildirak gardishining kengligi:</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="e8">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label for="f8" class="col-sm-8 col-form-label text-right">Moyning zichligi:</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="f8">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br>
+                        <div class="row">
+                            <div class="col-md-4 offset-2">
+                                <h3>Natija: <span class="badge badge-secondary" id="result8">0</span></h3>
+
+                            </div>
+                            <div class="col-md-6">
+                                <button type="button" class="btn btn-primary btn-lg" id="calcFun8">Hisoblash</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="card-header" id="headingNine" style="background-color: #00AA9E;">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed  text-white" type="button"
+                            data-toggle="collapse"
+                            data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine"
+                            style="background-color: #00AA9E;">
+                       Shestrna tishining dumalash sohasidagi yeyilish tezligini hisoblash
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordionExample">
+                <div class="card-body">
+                    <div class="container">
+                        <div class="row">
+
+                            <div class="col-md-6">
+                                <div class="alert alert-primary" role="alert">
+                                    Yetaklovchi shestrna uchun
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="a9" class="col-sm-8 col-form-label text-right">Obraziv zarrachaning o'rtacha o'lchami:</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="a9">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="b9" class="col-sm-8 col-form-label text-right">Moydagi obraziv zarrachaning miqdori:</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="b9">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="c9" class="col-sm-8 col-form-label text-right">Tutashuvchi kuchlar:</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="c9">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="d9" class="col-sm-8 col-form-label text-right">Yetaklovchi shestrna materialining qattiqligi:</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="d9">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="e9" class="col-sm-8 col-form-label text-right">Yetaklovchi (yetaklanuvchi) tishli g'ildirakning aylanishlar chastotasi:</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="e9">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="f9" class="col-sm-8 col-form-label text-right">Obraziv zarrachaning shaklini hisobga oluvchi koeffitsient:</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="f9">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="g9" class="col-sm-8 col-form-label text-right">Uzatishlar nisbati:</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="g9">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="h9" class="col-sm-8 col-form-label text-right">Shestrna materialining qattiqligi va obraziv zarrachaning mustahkamligining nisbat koeffitsienti:</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="h9">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="i9" class="col-sm-8 col-form-label text-right">Deformatsialangan hajmni buzilishiga olib keluvchi tutashish sikillarining soni:</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="i9">
+                                    </div>
+                                </div>
+
+                                <br>
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <h4>Natija: <span class="badge badge-secondary" id="result9">0</span></h4>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <button type="button" class="btn btn-primary btn-lg" id="calcFun9">Hisoblash</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="alert alert-primary" role="alert">
+                                    Yetaklanuvchi g'ildirak uchun
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="a99" class="col-sm-8 col-form-label text-right">Obraziv zarrachaning o'rtacha o'lchami:</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="a99">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="b99" class="col-sm-8 col-form-label text-right">Moydagi obraziv zarrachaning miqdori:</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="b99">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="c99" class="col-sm-8 col-form-label text-right">Tutashuvchi kuchlar:</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="c99">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="d99" class="col-sm-8 col-form-label text-right">Yetaklovchi shestrna materialining qattiqligi:</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="d99">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="e99" class="col-sm-8 col-form-label text-right">Yetaklovchi (yetaklanuvchi) tishli g'ildirakning aylanishlar chastotasi:</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="e99">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="f99" class="col-sm-8 col-form-label text-right">Obraziv zarrachaning shaklini hisobga oluvchi koeffitsient:</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="f99">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="g99" class="col-sm-8 col-form-label text-right">Uzatishlar nisbati:</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="g99">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="h99" class="col-sm-8 col-form-label text-right">Shestrna materialining qattiqligi va obraziv zarrachaning mustahkamligining nisbat koeffitsienti:</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="h99">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="i99" class="col-sm-8 col-form-label text-right">Deformatsialangan hajmni buzilishiga olib keluvchi tutashish sikillarining soni:</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="i99">
+                                    </div>
+                                </div>
+
+                                <br>
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <h4>Natija: <span class="badge badge-secondary" id="result99">0</span></h4>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <button type="button" class="btn btn-primary btn-lg" id="calcFun99">Hisoblash</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+        crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+<script type="application/javascript">
+
+    $("#calcFun1").click(function () {
+        let a = $("#a1").val()
+        let b = $("#b1").val()
+        let c = $("#c1").val()
+        let d = $("#d1").val()
+        let e = $("#e1").val()
+        let f = $("#f1").val()
+        $.ajax({
+            type: "GET",
+            url: "http://localhost:8080/calc1?aaa=" + a + "&bbb=" + b + "&ccc=" + c + "&ddd=" + d + "&eee=" + e + "&fff=" + f,
+            contentType: 'application/json; charset=utf-8',
+            success: function (response) {
+                $("#result1").empty().append(response + " mm/soat");
+            }
+        });
+    })
+
+    $("#calcFun2").click(function () {
+        let a = $("#a2").val()
+        let b = $("#b2").val()
+        $.ajax({
+            type: "GET",
+            url: "http://localhost:8080/calc2?aaa=" + a + "&bbb=" + b,
+            contentType: 'application/json; charset=utf-8',
+            success: function (response) {
+                $("#result2").empty().append(response);
+            }
+        });
+    })
+
+    $("#calcFun3").click(function () {
+        let a = $("#a3").val()
+        let b = $("#b3").val()
+        let c = $("#c3").val()
+        $.ajax({
+            type: "GET",
+            url: "http://localhost:8080/calc3?aaa=" + a + "&bbb=" + b + "&ccc=" + c,
+            contentType: 'application/json; charset=utf-8',
+            success: function (response) {
+                $("#result3").empty().append(response);
+            }
+        });
+    })
+
+    $("#calcFun4").click(function () {
+        let a = $("#a4").val()
+        let b = $("#b4").val()
+        $.ajax({
+            type: "GET",
+            url: "http://localhost:8080/calc4?aaa=" + a + "&bbb=" + b,
+            contentType: 'application/json; charset=utf-8',
+            success: function (response) {
+                $("#result4").empty().append(response);
+            }
+        });
+    })
+
+    $("#calcFun5").click(function () {
+        let a = $("#a5").val()
+        let b = $("#b5").val()
+        let c = $("#c5").val()
+        let d = $("#d5").val()
+        let e = $("#e5").val()
+        let f = $("#f5").val()
+        let g = $("#g5").val()
+        let h = $("#h5").val()
+        $.ajax({
+            type: "GET",
+            url: "http://localhost:8080/calc5?aaa=" + a + "&bbb=" + b + "&ccc=" + c + "&ddd=" + d + "&eee=" + e + "&fff=" + f+ "&ggg=" + g + "&hhh=" + h,
+            contentType: 'application/json; charset=utf-8',
+            success: function (response) {
+                $("#result5").empty().append(response + " мм <sup>3</sup>");
+            }
+        });
+    })
+
+    $("#calcFun55").click(function () {
+        let a = $("#a55").val()
+        let b = $("#b55").val()
+        let c = $("#c55").val()
+        let d = $("#d55").val()
+        let e = $("#e55").val()
+        let f = $("#f55").val()
+        let g = $("#g55").val()
+        let h = $("#h55").val()
+        $.ajax({
+            type: "GET",
+            url: "http://localhost:8080/calc55?aaa=" + a + "&bbb=" + b + "&ccc=" + c + "&ddd=" + d + "&eee=" + e + "&fff=" + f+ "&ggg=" + g + "&hhh=" + h,
+            contentType: 'application/json; charset=utf-8',
+            success: function (response) {
+                $("#result55").empty().append(response + " мм <sup>3</sup>");
+            }
+        });
+    })
+
+    $("#calcFun6").click(function () {
+        let a = $("#a6").val()
+        let b = $("#b6").val()
+        $.ajax({
+            type: "GET",
+            url: "http://localhost:8080/calc6?aaa=" + a + "&bbb=" + b,
+            contentType: 'application/json; charset=utf-8',
+            success: function (response) {
+                $("#result6").empty().append(response);
+            }
+        });
+    })
+
+    $("#calcFun7").click(function () {
+        let a = $("#a7").val()
+        let b = $("#b7").val()
+        $.ajax({
+            type: "GET",
+            url: "http://localhost:8080/calc7?aaa=" + a + "&bbb=" + b,
+            contentType: 'application/json; charset=utf-8',
+            success: function (response) {
+                $("#result7").empty().append(response);
+            }
+        });
+    })
+
+    $("#calcFun8").click(function () {
+        let a = $("#a8").val()
+        let b = $("#b8").val()
+        let c = $("#c8").val()
+        let d = $("#d8").val()
+        let e = $("#e8").val()
+        let f = $("#f8").val()
+        $.ajax({
+            type: "GET",
+            url: "http://localhost:8080/calc8?aaa=" + a + "&bbb=" + b + "&ccc=" + c + "&ddd=" + d + "&eee=" + e + "&fff=" + f,
+            contentType: 'application/json; charset=utf-8',
+            success: function (response) {
+                $("#result8").empty().append(response);
+            }
+        });
+    })
+
+    $("#calcFun9").click(function () {
+        let a = $("#a9").val()
+        let b = $("#b9").val()
+        let c = $("#c9").val()
+        let d = $("#d9").val()
+        let e = $("#e9").val()
+        let f = $("#f9").val()
+        let g = $("#g9").val()
+        let h = $("#h9").val()
+        let i = $("#i9").val()
+        $.ajax({
+            type: "GET",
+            url: "http://localhost:8080/calc9?aaa=" + a + "&bbb=" + b + "&ccc=" + c + "&ddd=" + d + "&eee=" + e + "&fff=" + f + "&ggg=" + g + "&hhh=" + h + "&iii=" + i,
+            contentType: 'application/json; charset=utf-8',
+            success: function (response) {
+                $("#result9").empty().append(response + "mm/soat");
+            }
+        });
+    })
+
+    $("#calcFun99").click(function () {
+        let a = $("#a99").val()
+        let b = $("#b99").val()
+        let c = $("#c99").val()
+        let d = $("#d99").val()
+        let e = $("#e99").val()
+        let f = $("#f99").val()
+        let g = $("#g99").val()
+        let h = $("#h99").val()
+        let i = $("#i99").val()
+        $.ajax({
+            type: "GET",
+            url: "http://localhost:8080/calc99?aaa=" + a + "&bbb=" + b + "&ccc=" + c + "&ddd=" + d + "&eee=" + e + "&fff=" + f + "&ggg=" + g + "&hhh=" + h + "&iii=" + i,
+            contentType: 'application/json; charset=utf-8',
+            success: function (response) {
+                $("#result99").empty().append(response + "mm/soat");
+            }
+        });
+    })
+
+
+
+</script>
+</body>
+
+</html>
